@@ -1,0 +1,143 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Tusk",
+		"_postman_id": "731c90fb-2d6b-5387-c8f9-def1b217fad4",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All User",
+			"request": {
+				"url": "http://localhost:3000/admin/user",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": "Get all user "
+			},
+			"response": []
+		},
+		{
+			"name": "Update User",
+			"request": {
+				"url": "http://localhost:3000/admin/user",
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"_id\":\"6082f67a1078014124c972d1\",\n\t\"email\":\"suvam001@hma.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete User",
+			"request": {
+				"url": "http://localhost:3000/admin/user/6082f67a1078014124c972d1",
+				"method": "DELETE",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User Register",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": {
+						"username": "postman",
+						"password": "password",
+						"saveHelperData": true,
+						"showPassword": false
+					}
+				},
+				"url": "http://localhost:3000/user/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic cG9zdG1hbjpwYXNzd29yZA==",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"suvam000@hma.com\",\n\"password\":\"gggggggggggggggggggg\",\n\"isAdmin\":false\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User login",
+			"request": {
+				"url": "http://localhost:3000/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"isAdmin\":false,\n\t\"email\":\"suvam000@hma.com\",\n\t\"password\":\"gggggggggggggggggggg\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Get Products",
+			"request": {
+				"url": "http://localhost:3000/admin/products",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Product",
+			"request": {
+				"url": "http://localhost:3000/user/product",
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2MDgzMjkzN2U3Zjg1YjJkYWNjMTY0ZGUiLCJpYXQiOjE2MTkyMDg3MjgsImV4cCI6MTYxOTIxMjMyOH0.WZAxH6zTMKL8gaougm8bPH1LqX9hiSY_3Qp9nD5Y8oIfO-5zoAUNmI1i125Z75wsxcpiQz2X6cmv99r4dvwtGg",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t  \"name\":\"Suvam oyd\",\n        \"price\": 55\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
